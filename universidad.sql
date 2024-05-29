@@ -14,7 +14,7 @@ SELECT persona.apellido1, persona.apellido2, persona.nombre, departamento.nombre
 SELECT asignatura.nombre, curso_escolar.anyo_inicio, curso_escolar.anyo_fin FROM persona JOIN alumno_se_matricula_asignatura ON alumno_se_matricula_asignatura.id_alumno = persona.id JOIN asignatura ON asignatura.id = alumno_se_matricula_asignatura.id_asignatura JOIN curso_escolar ON alumno_se_matricula_asignatura.id_curso_escolar = curso_escolar.id WHERE persona.nif = '26902806M';
 -- 8)--
 SELECT DISTINCT departamento.nombre FROM persona JOIN profesor ON persona.id = profesor.id_profesor JOIN departamento ON profesor.id_departamento = departamento.id JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor JOIN grado ON asignatura.id_grado = grado.id WHERE grado.nombre = 'Grado en Ingeniería Informática (Plan 2015)';
--- 9)-- Retorna un llistat amb tots els/les alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
+-- 9)-- 
 SELECT DISTINCT persona.* FROM persona JOIN alumno_se_matricula_asignatura ON alumno_se_matricula_asignatura.id_alumno = persona.id JOIN curso_escolar ON alumno_se_matricula_asignatura.id_curso_escolar = curso_escolar.id WHERE curso_escolar.anyo_inicio = '2018' && persona.tipo = 'alumno';
 -- UTILIZANDO LEFT JOIN Y RIGHT JOIN
 -- 1)--
@@ -47,8 +47,7 @@ SELECT grado.nombre, asignatura.tipo, COUNT(asignatura.creditos) FROM grado LEFT
 -- 8)--
 SELECT curso_escolar.anyo_inicio, COUNT(alumno_se_matricula_asignatura.id_alumno) AS 'Cantidad alumnos' FROM curso_escolar LEFT JOIN alumno_se_matricula_asignatura ON alumno_se_matricula_asignatura.id_curso_escolar = curso_escolar.id GROUP BY curso_escolar.id;
 -- 9)-- 
-SELECT persona.id, persona.nombre, persona.apellido1, persona.apellido2, COUNT(asignatura.id) AS 'Cantidad' FROM persona JOIN profesor ON profesor.id_profesor = persona.id LEFT JOIN asignatura 
-ON profesor.id_profesor = asignatura.id_profesor WHERE persona.tipo = 'profesor' GROUP BY profesor.id_profesor ORDER BY Cantidad DESC;
+SELECT persona.id, persona.nombre, persona.apellido1, persona.apellido2, COUNT(asignatura.id) AS 'Cantidad' FROM persona JOIN profesor ON profesor.id_profesor = persona.id LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE persona.tipo = 'profesor' GROUP BY profesor.id_profesor ORDER BY Cantidad DESC;
 -- 10)--
 SELECT persona.* FROM persona WHERE persona.tipo = 'alumno' ORDER BY (2024-YEAR(persona.fecha_nacimiento)) ASC, MONTH(persona.fecha_nacimiento) DESC, DAY(persona.fecha_nacimiento) DESC LIMIT 1;
 -- 11)--
