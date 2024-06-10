@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "6662310ba5f4be56c03e1456"
+  },
+  "marca": "Rayban",
+  "graduacion_l": 2.3,
+  "graduacion_r": 2,
+  "tipo_montura": "metalica",
+  "color_l": "",
+  "color_r": "",
+  "precio": 127
+}]

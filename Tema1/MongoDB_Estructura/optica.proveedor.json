@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "66622eaea5f4be56c03e1454"
+  },
+  "nombre": "proveedor1",
+  "direccion": {
+    "calle": "calle_proveedor1",
+    "numero": 1,
+    "piso": 1,
+    "puerta": "N/A",
+    "ciudad": "ciudad1",
+    "codigo_postal": 19029,
+    "pais": "pais1"
+  },
+  "telefono": 654321987,
+  "fax": 654321988,
+  "nif": "12345678A"
+}]
