@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "6662310ba5f4be56c03e1456"
+  },
+  "gafas_id": 1,
+  "marca": "Rayban",
+  "graduacion_l": 2.3,
+  "graduacion_r": 2,
+  "montura": {
+    "tipo_montura": "metalica",
+    "color_montura": "negro"
+  },
+  "color_l": "amarillo",
+  "color_r": "amarillo",
+  "precio": 127,
+  "fecha_venta": {
+    "$date": "2014-04-24T00:00:00.000Z"
+  },
+  "vendedor": 1,
+  "comprador": 1,
+  "proveedor": 1
+},
+{
+  "_id": {
+    "$oid": "66680d31ebfa8000234690cd"
+  },
+  "gafas_id": 2,
+  "marca": "Guess",
+  "graduacion_l": 0.75,
+  "graduacion_r": 0.5,
+  "montura": {
+    "tipo_montura": "pasta",
+    "color_montura": "azul marino"
+  },
+  "color_l": "",
+  "color_r": "",
+  "precio": 100,
+  "fecha_venta": {},
+  "vendido_por": null,
+  "comprador": null,
+  "proveedor": 1
+}]

@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "666808baebfa8000234690c7"
+  },
+  "cliente_id": 2,
+  "nombre": "NombreCliente2",
+  "direccion": {
+    "calle": "calle_cliente2",
+    "numero": 2,
+    "piso": 2,
+    "puerta": 2,
+    "localidad": "localidad2",
+    "codigo_postal": 19029,
+    "pais": "pais1"
+  },
+  "telefono": 678901235,
+  "correo": "cliente2@cliente.com",
+  "fecha_registro": {
+    "$date": "2014-04-25T00:00:00.000Z"
+  },
+  "referenciado_por": 1,
+  "compras": [
+    1
+  ]
+},
+{
+  "_id": {
+    "$oid": "66680c23ebfa8000234690c9"
+  },
+  "cliente_id": 1,
+  "nombre": "NombreCliente1",
+  "direccion": {
+    "calle": "calle_cliente1",
+    "numero": 1,
+    "piso": 1,
+    "puerta": 1,
+    "localidad": "localidad1",
+    "codigo_postal": 19029,
+    "pais": "pais1"
+  },
+  "telefono": 678901234,
+  "correo": "cliente1@cliente.com",
+  "fecha_registro": {
+    "$date": "2014-04-24T00:00:00.000Z"
+  },
+  "referenciado_por": null,
+  "compras": []
+}]
